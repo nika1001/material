@@ -2152,7 +2152,7 @@ MdPanelRef.prototype._configureClickOutsideToClose = function() {
 
         // We check if the sourceEl of the event is the panel element or one
         // of it's children. If it is not, then close the panel.
-        if (sourceEl !== self.panelEl[0] && !self.panelEl[0].contains(sourceEl)) {
+        if (sourceEl && sourceEl !== self.panelEl[0] && !self.panelEl[0].contains(sourceEl)) {
           self.close();
         }
 
